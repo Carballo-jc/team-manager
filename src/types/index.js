@@ -1,0 +1,3 @@
+export const CARGAR_JUGADORES = "CARGAR_JUGADORES";
+export const NEW_HEANDLIN = "NEW_HEANDLIN ";
+export const NEW_ALTERNATE = "NEW_ALTERNATE ";
