@@ -1,12 +1,11 @@
 import Playeres from "./components/Playeres";
-import TeamManager from "./components/TeamManager";
+import "./styles/styles.scss";
 
 const App = () => {
   return (
     <main>
       <h1>EDmanager</h1>
       <Playeres />
-      <TeamManager />
     </main>
   );
 };

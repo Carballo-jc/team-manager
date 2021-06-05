@@ -1,25 +1,32 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { deletePlayerAlternate } from "../actions/playerActions";
 
-const Alternantes = ({ alternantes }) => {
+const AlternantesTeam = ({ alternates }) => {
+  const dispatch = useDispatch();
+  const borrar = (alternant) => dispatch(deletePlayerAlternate(alternant));
+  const deleteAlternate = (alternant) => {
+    borrar(alternant);
+  };
   return (
-    <section>
+    <div>
       <h2>Suplente</h2>
       <div className="section_alternantes">
-        {alternantes.map((alternant, index) => {
-          const { name, image } = alternant;
+        {alternates.map((alternant) => {
+          const { name, image, id } = alternant;
           return (
-            <article key={index}>
-              <div>
-                <img src={image} alt="" />
-                <button>X</button>
+            <article key={id} >
+              <div >
+                <img src={image} alt={name}/>
+                <button onClick={()=>deleteAlternate(alternant)}>X</button>
               </div>
               <p>{name}</p>
             </article>
           );
         })}
       </div>
-    </section>
+    </div>
   );
 };
 
-export default Alternantes;
+export default AlternantesTeam;

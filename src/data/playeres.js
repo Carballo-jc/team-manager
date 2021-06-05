@@ -68,8 +68,7 @@ const playeres = [
   {
     id: 12,
     name: "Deivis Rivera",
-    image:
-      "https://drupal.ed.team/sites/default/files/imagenes-cdn-edteam/2019-05/deivis.jpg",
+    image: "https://d22uy85tnpcynx.cloudfront.net/2019/12/neyjrs-1024x574.jpg",
   },
   {
     id: 13,
